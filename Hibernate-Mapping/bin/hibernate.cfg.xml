@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    
+    	<property name="connection.username">root</property>
+    	<property name="connection.password">968886</property>
+    	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    	<property name="connection.url">jdbc:mysql:///login1</property>
+    	
+    	<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+    	
+    	<property name="show_sql">true</property>
+    	
+    	<property name="format_sql">true</property>
+    	
+    	<property name="hbm2ddl.auto">create</property>
+    	
+    	<!-- 映射单向多对一的关系
+    	<mapping resource="cn/zsl/hibernate/DanXiang/n21/Customer.hbm.xml"/>
+    	<mapping resource="cn/zsl/hibernate/DanXiang/n21/Order.hbm.xml"/>
+    	-->
+    	
+    	<!-- 映射双向多对一的关系
+    	<mapping resource="cn/zsl/hibernate/Shuangxiang/n21/Customer.hbm.xml"/>
+    	<mapping resource="cn/zsl/hibernate/Shuangxiang/n21/Order.hbm.xml"/>
+    	 -->
+    	 
+    	 <!-- 基于外键映射的1-1关联关系
+    	 <mapping resource="cn/zsl/hibernate/foreign/one2one/Department.hbm.xml"/>
+    	 <mapping resource="cn/zsl/hibernate/foreign/one2one/Manager.hbm.xml"/>
+    	  -->
+    	  
+    	  <!-- 多对多的单向关联关系映射
+    	 <mapping resource="cn/zsl/hibernate/DanXiang/n2n/Category.hbm.xml"/>
+    	 <mapping resource="cn/zsl/hibernate/DanXiang/n2n/Item.hbm.xml"/>
+    	   -->
+    	   
+    	  <!-- 多对多的双向关联关系映射
+    	  <mapping resource="cn/zsl/hibernate/Shuangxiang/n2n/Category.hbm.xml"/>
+    	  <mapping resource="cn/zsl/hibernate/Shuangxiang/n2n/Item.hbm.xml"/>
+    	   --> 
+    	   
+    	  <!-- 基于subclass对继承关系的映射
+    	  <mapping resource="cn/zsl/hibernate/Extends/subclass/Person.hbm.xml"/>
+    	  -->
+    	    
+    	  <!-- 基于joined-subclass对继承关系的映射 -->
+    	  <mapping resource="cn/zsl/hibernate/Extends/joinedsubclass/Person.hbm.xml"/>
+    	   
+    	   
+    </session-factory>
+</hibernate-configuration>
